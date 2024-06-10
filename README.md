@@ -1,66 +1,77 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+willkommen zu meiner laravel art gallery
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+dies ist ein project von D. Bakumenko showcase art-gallery
 
-## About Laravel
+vor einigen tagen habe ich erfolgreich eine andere galerie generiert und nun möchte diese in mein eigenes project umwandeln und individuell zusätzlich gestalten.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+https://dbart.b12sites.com/index
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+das ist die richtdatei die ich verwende
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+folgende anleitung kann benutzt werden um project zu initialisieren:
 
-## Learning Laravel
+1. Installation und Einrichtung
+   1.1 Voraussetzungen
+   Stelle sicher, dass du die folgenden Programme installiert hast:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+PHP (>=7.3)
+Composer
+Node.js und npm
+MySQL oder eine andere Datenbank
+Laravel Installer (optional, aber empfohlen)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+1.2 Erstelle ein neues Laravel-Projekt
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Öffne dein Terminal und navigiere zu dem Verzeichnis, in dem du dein Projekt erstellen möchtest.
+Erstelle ein neues Laravel-Projekt:
+bash
 
-## Laravel Sponsors
+composer create-project --prefer-dist laravel/laravel art-gallery
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Wechsle in das neu erstellte Verzeichnis:
+bash
 
-### Premium Partners
+cd art-gallery 2. Einrichtung der Entwicklungsumgebung
+2.1 Öffne das Projekt in Visual Studio Code
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Öffne Visual Studio Code.
+Wähle File > Open Folder und navigiere zu deinem Projektordner art-gallery.
 
-## Contributing
+2.2 Konfiguration der Umgebungsvariablen
+Öffne die Datei .env.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Konfiguriere die Datenbankeinstellungen, indem du die Werte für DB_DATABASE, DB_USERNAME und DB_PASSWORD anpasst:
 
-## Code of Conduct
+env
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=art_gallery
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+Erstelle die Datenbank:
 
-## Security Vulnerabilities
+sql
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+CREATE DATABASE art_gallery;
 
-## License
+3. Grundlegende Struktur der Galerie
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+3.1 Erstelle die Authentifizierung
+Laravel bietet ein einfaches Authentifizierungssystem out of the box:
+
+Installiere Laravel UI:
+bash
+
+composer require laravel/ui
+
+Generiere Authentifizierungs-Skelette:
+bash
+
+php artisan ui react --auth
+
+Installiere Abhängigkeiten und kompiliere die Assets:
+bash
+
+npm install && npm run dev
