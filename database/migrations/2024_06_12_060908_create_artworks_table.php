@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('artworks', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->text('description');
+            $table->decimal('price', 8, 2);
+            $table->string('image_path');
             $table->timestamps();
         });
     }
