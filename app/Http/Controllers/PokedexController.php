@@ -19,13 +19,20 @@ class PokedexController extends Controller
         ]);
 
         $search = strtolower($request->input('search'));
-        $response = Http::get("https://pokeapi.co/api/v2/pokemon/{$search}");
+        $response = Http::get("https://pokeapi.co/api/v2/pokemon-species/{$search}");
 
         if ($response->successful()) {
-            $pokemon = $response->json();
-            return view('pokedex.index', compact('pokemon'));
-        } else {
-            return view('pokedex.index')->withErrors(['No Pokémon found with that name.']);
+            $species = $response->json();
+            $name = collect($species['names'])->firstWhere('language.name', 'de')['name'];
+
+            $pokemonResponse = Http::get("https://pokeapi.co/api/v2/pokemon/{$species['id']}");
+
+            if ($pokemonResponse->successful()) {
+                $pokemon = $pokemonResponse->json();
+                return view('pokedex.index', compact('pokemon', 'name'));
+            }
         }
+
+        return view('pokedex.index')->withErrors(['No Pokémon found with that name.']);
     }
 }
