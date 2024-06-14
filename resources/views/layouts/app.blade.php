@@ -23,9 +23,14 @@
     text-align: center;
 }
 
+.search-input{
+    
+}
+
 .card-body {
     display: flex;
     align-items: center;
+    justify-content: center
 }
 
 .img-fluid {
@@ -35,6 +40,10 @@
 
 .input-group {
     margin-bottom: 20px;
+}
+
+.col-md-4{
+    text-align: center;
 }
     </style>
 </head>
