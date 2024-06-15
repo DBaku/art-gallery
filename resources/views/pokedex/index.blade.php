@@ -1,26 +1,29 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <h1>Pokédex</h1>
-    <form action="{{ route('pokedex.search') }}" method="POST" class="mb-3">
-        @csrf
-        <div class="input-group">
-            <input type="text" name="search" class="form-control" placeholder="Search Pokémon (German name)" required>
-            <div class="input-group-append">
-                <button class="btn btn-primary" type="submit">Search</button>
+<div class="search-input">
+
+    <div class="container">
+        <h1>Pokédex</h1>
+        <form action="{{ route('pokedex.search') }}" method="POST" class="mb-3">
+            @csrf
+            <div class="input-group">
+                <input type="text" name="search" class="form-control" placeholder="Search Pokémon (German name)" required>
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </div>
             </div>
         </div>
-    </form>
-
-    @if ($errors->any())
+        </form>
+        
+        @if ($errors->any())
         <div class="alert alert-danger">
             @foreach ($errors->all() as $error)
-                <p>{{ $error }}</p>
+            <p>{{ $error }}</p>
             @endforeach
         </div>
-    @endif
-
+        @endif
+        
     @isset($pokemon)
         <div class="card">
             <div class="card-header">
@@ -48,6 +51,7 @@
                 </div>
             </div>
         </div>
+    </div>
     @endisset
 </div>
 @endsection

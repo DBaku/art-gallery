@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laravel Pokédex</title>
-    <link href="{{ mix('css/pokedex.css') }}" rel="stylesheet">
+    {{-- <link href="{{ mix('css/pokedex.css') }}" rel="stylesheet"> --}}
     <style>
 .container {
     border: 2px solid black; 
@@ -14,9 +14,14 @@
     background-color: red;
 }
 
-.card {
 
+
+.card {
+    background-color: red;
     margin-top: 20px;
+    max-width:400px;
+    border: 2px solid black;
+    margin: 0 auto;
 }
 
 .card-header {
@@ -24,7 +29,8 @@
 }
 
 .search-input{
-    
+    text-align: center;
+    justify-content: center;
 }
 
 .card-body {
@@ -44,6 +50,7 @@
 
 .col-md-4{
     text-align: center;
+    background-color: whitesmoke
 }
     </style>
 </head>
