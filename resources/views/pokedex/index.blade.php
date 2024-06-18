@@ -8,7 +8,7 @@
         <form action="{{ route('pokedex.search') }}" method="POST" class="mb-3">
             @csrf
             <div class="input-group">
-                <input type="text" name="search" class="form-control" placeholder="Search Pokémon (German name)" required>
+                <input type="text" name="search" class="form-control" placeholder="Search Pokémon (eng name)" required>
                 <div class="input-group-append">
                     <button class="btn btn-primary" type="submit">Search</button>
                 </div>
