@@ -13,18 +13,19 @@
 
         <h2>Kontaktinformationen</h2>
         <p>
-            Max Mustermann<br>
-            Musterstraße 1<br>
-            12345 Musterstadt<br>
+            Dimitrij Bakumenko<br>
+            Köpenicker Landstrasse 215<br>
+            12437 Berlin<br>
         </p>
         <p>
-            Telefon: +49 (0) 123 456789<br>
+            Telefon: +49 (0) 17672850942<br>
             E-Mail: <a href="mailto:max@example.com">max@example.com</a>
+            {{-- E-Mail: <a href="mailto:dimaba487@gmail.com">dimaba487@gmail.com</a> --}}
         </p>
 
         <h2>Vertreten durch</h2>
         <p>
-            Max Mustermann<br>
+            Mark Boukrinkski// Dimitrij Bakumenko<br>
         </p>
 
         <h2>Registereintrag</h2>
