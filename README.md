@@ -1,12 +1,8 @@
 willkommen zu meiner laravel art gallery
 
-dies ist ein project von D. Bakumenko showcase art-gallery
+dies ist ein project von DBaku showcase art-gallery
 
-vor einigen tagen habe ich erfolgreich eine andere galerie generiert und nun möchte diese in mein eigenes project umwandeln und individuell zusätzlich gestalten.
 
-https://dbart.b12sites.com/index
-
-das ist die richtdatei die ich verwende
 
 folgende anleitung kann benutzt werden um project zu initialisieren:
 
